@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  server:
+    image: python:3.14-slim@sha256:a2b82f3c48559aa0a8446d9af49826b6e2b2016f4cd2afabfe6013ec53729170
+    network_mode: host
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 20s
+    environment:
+      TZ: America/Vancouver
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    command: ["python3", "/service/household_display_service.py", "--config", "/data/config/config.json", "--host", "127.0.0.1", "--port", "8770"]
+    extra_hosts:
+      - "umbrel.local:192.168.68.71"
+    volumes:
+      - ${APP_DATA_DIR}/data/service:/service:ro
+      - ${APP_DATA_DIR}/data/hub:/hub:ro
+      - ${APP_DATA_DIR}/data/config:/data/config
+      - ${APP_DATA_DIR}/data/logs:/data/logs
+      - /usr/share/zoneinfo:/usr/share/zoneinfo:ro

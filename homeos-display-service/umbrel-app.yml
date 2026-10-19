@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: homeos-display-service
+storage:
+  dataRoot: data
+category: automation
+name: Home OS display service
+version: "2026.10.19"
+tagline: The kitchen hub's service, on the home server
+description: >-
+  Runs the kitchen hub's display service on the home server, and answers paired devices only, over HTTPS on
+  192.168.68.71:8443. The code, settings and keys are copied into the app's data folder by hand, as the service README describes.
+releaseNotes: ""
+developer: Home OS
+website: ""
+dependencies: []
+repo: ""
+support: ""
+port: 8443
+gallery: []
+path: "/hub/"
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+submitter: Home OS
+submission: ""
