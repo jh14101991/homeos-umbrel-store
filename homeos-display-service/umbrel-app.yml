@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: automation
 name: Home OS display service
-version: "2026.10.19"
+version: "2026.10.19.2"
 tagline: The kitchen hub's service, on the home server
 description: >-
   Runs the kitchen hub's display service on the home server, and answers paired devices only, over HTTPS on
@@ -15,7 +15,7 @@ website: ""
 dependencies: []
 repo: ""
 support: ""
-port: 8443
+port: 8446
 gallery: []
 path: "/hub/"
 defaultUsername: ""
